@@ -1,5 +1,8 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        ViewMain calculadora = new ViewMain();
+        Eventos evento = new Eventos(calculadora);
+
+        calculadora.evento(evento);
     }
 }
