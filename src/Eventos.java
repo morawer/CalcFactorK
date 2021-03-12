@@ -22,7 +22,7 @@ public class Eventos implements ActionListener{
 
                 resultado = (int) (caudal / Math.pow(perdidaCarga, 0.97));
 
-                calcFactorK.getFactorK().setText(Float.toString(resultado));
+                calcFactorK.getFactorK().setText(Integer.toString(resultado));
 
 
             } catch (Exception g) {
