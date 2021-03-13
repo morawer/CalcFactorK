@@ -138,9 +138,6 @@ public class ViewMain extends JFrame {
 
     public void evento(Eventos eventos) {
         calcular.addActionListener(eventos);
-    }
-        
-
-    
-    
+        calcular.addKeyListener(eventos);
+    } 
 }
