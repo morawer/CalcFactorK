@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.Font;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -33,8 +34,8 @@ public class ViewMain extends JFrame {
         getContentPane().setBackground(new Color( 255, 255, 255));
 
         Image logo1 = new ImageIcon("src/logoSys.jfif").getImage();
-        logo = new JLabel(new ImageIcon(logo1.getScaledInstance(310, 170, Image.SCALE_SMOOTH)));
-        logo.setBounds(30,10, 310, 80);
+        logo = new JLabel(new ImageIcon(logo1.getScaledInstance(305, 175, Image.SCALE_SMOOTH)));
+        logo.setBounds(30,10, 305, 85);
         add(logo);
 
         etiquetaCaudal = new JLabel("Caudal: ");
@@ -46,7 +47,7 @@ public class ViewMain extends JFrame {
         add(etiquetaPa);
 
         etiquetaFactorK = new JLabel("FactorK: ");
-        etiquetaFactorK.setBounds(80, 280, 105, 30);
+        etiquetaFactorK.setBounds(80, 300, 105, 30);
         add(etiquetaFactorK);
 
         caudal = new JTextField();
@@ -58,12 +59,16 @@ public class ViewMain extends JFrame {
         pascales.setBounds(180, 160, 120, 30);
         add(pascales);
 
+        Font fuente = new Font("Arial", Font.BOLD, 18);
         factorK = new JTextField();
-        factorK.setBounds(180, 280, 120, 30);
+        factorK.setBounds(180, 300, 120, 30);
+        factorK.setFont(fuente);
+        factorK.setBorder(null);
+        
         add(factorK);
 
         calcular = new JButton();
-        calcular.setBounds(100, 210, 180, 45);
+        calcular.setBounds(100, 230, 180, 45);
         calcular.setText("CALCULAR");
         add(calcular);
     }
@@ -138,6 +143,8 @@ public class ViewMain extends JFrame {
 
     public void evento(Eventos eventos) {
         calcular.addActionListener(eventos);
+        caudal.addKeyListener(eventos);
+        pascales.addKeyListener(eventos);
         calcular.addKeyListener(eventos);
     } 
 }
