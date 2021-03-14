@@ -40,16 +40,6 @@ public class Eventos implements ActionListener, KeyListener{
     }
 
     @Override
-    public void keyTyped(KeyEvent e) {
- 
-    }
-
-    @Override
-    public void keyReleased(KeyEvent e) {
-        
-    }
-
-    @Override
     public void keyPressed(KeyEvent e) {
 
         if (e.getKeyCode()==KeyEvent.VK_ENTER){
@@ -74,5 +64,15 @@ public class Eventos implements ActionListener, KeyListener{
                 calcFactorK.getFactorK().setText(" "); 
             }   
         }  
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+ 
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        
     }
 }

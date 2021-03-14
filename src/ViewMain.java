@@ -8,8 +8,6 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import java.awt.Toolkit;
 import java.awt.Image;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 
 public class ViewMain extends JFrame {
 
@@ -25,7 +23,7 @@ public class ViewMain extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE); // Si clicamos en la "x" la calculadora se cierra.
         setResizable(false); // Impedimos poder redimensionar la calculadora.
         setTitle("CALCULADORA FACTOR K"); // Titulo de la calculadora.
-        setIconImage(Toolkit.getDefaultToolkit().getImage("src/vista/imagenes/Calculator-icon.png")); // Icono calculadora.
+        setIconImage(Toolkit.getDefaultToolkit().getImage("src/icon.png")); // Icono calculadora.
         setLayout(null); // Desactivamos la colocoacion de los componentes automaticamente.
         inicializar(); // Funcion que contiene los componentes de la calculadora.
         setVisible(true);
@@ -71,7 +69,6 @@ public class ViewMain extends JFrame {
         calcular = new JButton();
         calcular.setBounds(100, 230, 180, 45);
         calcular.setText("CALCULAR");
-        calcular.setMnemonic(KeyEvent.VK_B);
         add(calcular);
     }
 
