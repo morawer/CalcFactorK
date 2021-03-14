@@ -8,6 +8,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import java.awt.Toolkit;
 import java.awt.Image;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 public class ViewMain extends JFrame {
 
@@ -64,12 +66,12 @@ public class ViewMain extends JFrame {
         factorK.setBounds(180, 300, 120, 30);
         factorK.setFont(fuente);
         factorK.setBorder(null);
-        
         add(factorK);
 
         calcular = new JButton();
         calcular.setBounds(100, 230, 180, 45);
         calcular.setText("CALCULAR");
+        calcular.setMnemonic(KeyEvent.VK_B);
         add(calcular);
     }
 
@@ -143,8 +145,7 @@ public class ViewMain extends JFrame {
 
     public void evento(Eventos eventos) {
         calcular.addActionListener(eventos);
-        caudal.addKeyListener(eventos);
         pascales.addKeyListener(eventos);
-        calcular.addKeyListener(eventos);
+        caudal.addKeyListener(eventos);
     } 
 }
